@@ -1,0 +1,319 @@
+body {
+    background-color: #141C26;
+}
+
+.navbar {
+    padding: 10px;
+}
+
+.container-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    width: 80px;
+    height: 40px;
+}
+
+.logo a img {
+    height: 40px; /* Ajusta la altura de la imagen según sea necesario */
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu li a {
+    color: #D8DFEF;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: 'roboto', sans-serif;
+    font-weight: 500;
+}
+
+.menu li a:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 20px;
+}
+
+/* seccion header-home */
+header h1 {
+    color: #D8DFEF;
+    font-family: 'prompt', sans-serif;
+    font-size: 100px;
+    font-weight: 800;
+    line-height: 1; /* Puedes ajustar este valor según sea necesario */
+    margin: 0;
+}
+
+.header-class {
+    padding: 50px;
+    margin: 50px;
+}
+
+.button-header {
+    margin-top: 20px;
+}
+
+/* seccion about-home */
+.container-about {
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    
+}
+
+.container-about > div {
+    width: 50%;
+    background-color: #141C26;
+}
+
+.img-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-about img {
+    width: 50%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente según el ancho */
+    max-width: 400px; /* Establece un ancho máximo para la imagen */
+    max-height: 400px; /* Establece una altura máxima para la imagen */
+    object-fit: cover;
+}
+
+.description-about {
+    color: #fff; /* Ajustamos el color del texto */
+    padding: 20px; /* Ajustamos el espacio interno */
+}
+
+/* seccion proyectos */
+
+.container-projects {
+    display: block;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-card-project {
+    background-color: #0a1018;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    color: #cfcfcf;
+}
+
+.container-card-project img {
+    width: 90%;
+    height: 90%;
+    margin: auto auto;
+}
+
+.projects-img {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.container-card-project h2 {
+    font-family: 'prompt', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.container-card-project p {
+    font-family: 'roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+/* modal proyectos*/
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #9ea6b1bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+
+}
+
+.modal-show {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+}
+
+.modal-container {
+    margin: auto;
+    max-width: 600px;
+    max-height: 90%;
+    width: 90%;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    background-color: aliceblue;
+}
+
+
+/* seccion skill*/
+
+.container-skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    row-gap: 20px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.card-skills {
+    background-color: #141C26;
+    color: #D8DFEF;
+    font-family: 'prompt', sans-serif;
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+
+}
+
+.card-skills img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: auto;
+}
+
+
+/* seccion contact*/
+.container-contact {
+    width: 90%;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0px auto;
+    padding: 20px;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.container-form input,
+.container-form textarea {
+    width: 80%; /* Puedes ajustar este valor según el tamaño deseado */
+    margin: 0 auto; /* Centra horizontalmente los elementos */
+    padding: 8px; /* Ajusta el espaciado interno para que los elementos no se vean demasiado pequeños */
+    margin-bottom: 10px; /* Agrega un margen inferior para separar los elementos */
+    display: block; /* Cambia la visualización de los elementos a bloque para que el margin: 0 auto; funcione */
+} 
+
+.container-footer {
+    display: flex;
+    margin-top: 30px;
+    padding: 50px;
+}
+
+
+/* Estilos para botónes */
+
+/* boton small */
+.button-small {
+    background-color: #9FEF00; /* Color de fondo del botón */
+    color: #0a1018; /* Color del texto del botón */
+    border: none; /* Elimina el borde */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 3px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.button-small:hover { /* Estilos para el botón al pasar el cursor */
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el cursor */
+}
+
+
+/* boton medio */
+.button-medium {
+    background-color: #9FEF00; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Elimina el borde */
+    padding: 10px 80px; /* Espaciado interno del botón */
+    font-size: 20px; /* Tamaño de fuente */
+    border-radius: 3px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Estilos para el botón al pasar el cursor */
+.button-medium:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* boton large */
+.button-large {
+    background-color: #9FEF00; /* Color de fondo del botón */
+    color: #141C26; /* Color del texto del botón */
+    border: none; /* Elimina el borde */
+    padding: 10px 80px; /* Espaciado interno del botón */
+    font-size: 20px; /* Tamaño de fuente */
+    border-radius: 3px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Estilos para el botón al pasar el cursor */
+.button-large:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el cursor */
+}
+
+
+/* boton medio secundario */
+.button-medium-second {
+    background-color: transparent;
+    border: 2px solid #9FEF00; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 80px; /* Espaciado interno del botón */
+    font-size: 20px; /* Tamaño de fuente */
+    border-radius: 3px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Estilos para el botón al pasar el cursor */
+.button-medium-second:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el cursor */
+}

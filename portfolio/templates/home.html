@@ -1,0 +1,179 @@
+{% extends "layout.html" %} {% load static %} {% block content %}
+
+<!--header-->
+
+<header>
+  <div class="header-class">
+    <h2 class="nombre-header">SoySebastian</h2>
+    <h1>Full Stack developer</h1>
+    <h1>Python</h1>
+    <button class="button-large button-header">Ver Proyectos</button>
+  </div>
+</header>
+
+<main>
+  <!--seccion about-->
+  <section id="about">
+    <div class="container-about">
+      <div class="img-about">
+        <img src="{% static 'img/setup-dog.jpg' %}" />
+      </div>
+      <div class="description-about">
+        <h3>About Me</h3>
+        <p>
+          On the other hand, we denounce with righteous indignation and dislike
+          men who are so beguiled and demoralized by the charms of pleasure of
+          the moment, so blinded by desire, that they cannot foresee the pain
+          and trouble that are bound to ensue; and equal blame belongs to those
+          who fail in their duty through weakness of will,
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!--seccion experiencia-->
+  <section id="skills">
+    <div class="section-skills">
+      <h2 class="title-section">TECNOLOGIAS</h2>
+      <div class="container-skills">
+        {% for skill in skills %}
+        <div class="card-skills">
+          <img src="{{skill.image.url}}" alt="{{skill.title}}" />
+          {{skill.title}}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!--seccion proyectos 2-->
+  <section id="projects">
+    <h2 class="title-section">MIS PROJYECTOS</h2>
+    <div class="container-project row">
+      {% for project in projects %}
+      <div class="col-md-6 container-card">
+        <div class="card mx-auto" style="width: 32rem">
+          <img
+            src="{{project.image.url}}"
+            class="img-fluid img-card-project"
+            alt="{{project.title}}" />
+          <div class="card-body">
+            <h5 class="card-title">{{project.title}}</h5>
+            <p class="card-text">{{project.description}}</p>
+          </div>
+          <ul class="list-group list-group-flush tag-container">
+            <li class="list-group-item">
+              {% for tag in project.tags.all %}
+              <span class="tag-element">#{{ tag }}</span>
+              {% endfor %}
+            </li>
+          </ul>
+          <div class="card-body button-container">
+            {% if project.url_github %}
+            <a href="{{project.url_github}}" class="card-link button-card">
+              <i class="fa-brands fa-github"></i> Codigo del Proyecto
+            </a>
+            {% endif %} {% if project.url %}
+            <a href="{{project.url}}" class="card-link button-card">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Url del
+              proyecto
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!--seccion contacto-->
+  <section id="contact">
+    <h2 class="title-section">Contacto</h2>
+    <div class="container-contact">
+      <div class="container-info">
+        <div class="container-text">
+          <h3>Informacion de contacto</h3>
+          <p>
+            On the other hand, we denounce with righteous indignation and
+            dislike
+          </p>
+        </div>
+        <div class="container-icon">
+          <div class="icon-contact">
+            <div class="icons">
+              <div class="items-icon">
+                <a href="{{project.github_url}}" class="card-link">
+                  <span>
+                    <i class="fa-brands fa-github fa-2x"></i>
+                  </span>
+                  Git Hub
+                </a>
+              </div>
+              <div class="items-icon">
+                <a href="{{project.behance_url}}" class="card-link">
+                  <span>
+                    <i class="fa-brands fa-behance fa-2x"></i>
+                  </span>
+                  Behance
+                </a>
+              </div>
+              <div class="items-icon">
+                <a href="{{project.linkedin_url}}" class="card-link">
+                  <span>
+                    <i class="fa-brands fa-linkedin fa-2x"></i>
+                  </span>
+                  Linkedin
+                </a>
+              </div>
+            </div>
+            <div class="email">
+              <div class="item-mail">
+                <h6>Mi mail directo</h6>
+                <p>msebastiandelajara@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-form">
+        <form action="/enviar" method="POST">
+          <div class="div-input">
+            <input
+              class="item-form"
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Nombre"
+              required /><br />
+          </div>
+
+          <div class="div-input">
+            <input
+              class="item-form"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required /><br />
+          </div>
+
+          <div class="div-input">
+            <textarea
+              class="item-form"
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              placeholder="Comentario"
+              required></textarea
+            ><br />
+          </div>
+
+          <input class="item-form" type="submit" value="Enviar" />
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}

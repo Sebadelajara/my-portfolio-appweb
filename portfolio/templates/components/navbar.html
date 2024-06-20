@@ -1,0 +1,70 @@
+{% load static %}
+<!--navbar-->
+{% comment %}
+<nav class="navbar">
+  <div class="container-navbar">
+    <div class="logo">
+      <a href="#home"
+        ><img src="{% static 'img/django-img.jpg' %}" alt="Logo"
+      /></a>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="{% url 'home' %}">Inicio</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'projects' %}">Projects</a></li>
+        <li><a href="{% url 'contact' %}">Contacto</a></li>
+      </ul>
+    </div>
+    <button class="button-small" href="{% url 'blog:posts' %}">Blog</button>
+  </div>
+  {% endcomment %}
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img
+          src="{% static 'img/python.png' %}"
+          alt="logo"
+          style="height: 40px" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex" role="search">
+          <button
+            href="{% url 'blog:posts' %}"
+            class="btn button-small"
+            type="submit">
+            BLOG
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</nav>

@@ -1,0 +1,439 @@
+body {
+    background-image: url('/static/img/landscape-1.jpg');
+    background-repeat: no-repeat;
+    /* background-repeat: repeat; */
+    background-size: cover;
+    /* background-size: auto; */
+    background-attachment: fixed; /* Hace que la imagen de fondo esté fija */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
+    z-index: 1000; /* Asegura que la navbar esté siempre encima de otros elementos */
+    padding: 10px 0;
+}
+
+.navbar-nav {
+    justify-content: center;
+    width: 100%;
+    gap: 3rem;
+}
+
+.navbar a {
+    color: #D8DFEF;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: 'roboto', sans-serif;
+    font-weight: 500;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.content {
+    margin-top: 70px; /* Añade espacio para evitar que el contenido quede oculto detrás de la navbar */
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para el contenido */
+    border-radius: 10px;
+}
+
+
+/* seccion header-home */
+header h1 {
+    color: #7e75e8;
+    font-family: 'prompt', sans-serif;
+    font-size: 100px;
+    font-weight: 800;
+    line-height: 1; /* Puedes ajustar este valor según sea necesario */
+    margin: 0;
+}
+
+.nombre-header {
+    color: #D8DFEF;
+    font-family: 'roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+.header-class {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 3rem 3rem;
+    align-items: center;
+
+}
+
+.button-header {
+    margin-top: 30px;
+}
+
+
+/* seccion about-home */
+
+.container-about {
+    margin: 0rem 4rem;
+    padding: 4rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 400px;
+}
+
+.img-about {
+    flex: 1;
+    padding: 1rem;
+}
+
+.description-about {
+    flex: 3;
+    padding: 1rem;
+    font-size: 22px; /* Ajusta este valor según tus necesidades */
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #6b6b6b;
+}
+
+.description-about h3 {
+    font-family: 'prompt', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.img-about img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* seccion skills */
+.section-skills {
+    margin: 0rem 0;
+    padding: 1rem 0;
+}
+
+.section-skills h2 {
+    color: #7e75e8;
+}
+
+.container-skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    row-gap: 2rem;
+    margin: 3rem;
+    padding: 10px;
+}
+
+.card-skills {
+    color: #D8DFEF;
+    font-family: 'prompt', sans-serif;
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+
+}
+
+.card-skills img {
+    display: block;
+    margin: 0 auto;
+    width: 64px;
+    height: auto;
+}
+
+
+/* proyectos */
+#projects h2 {
+    color: #7e75e8;
+}
+
+#projects {
+    background-color: transparent;
+}
+
+.container-project {
+    margin: 3rem 5rem;
+}
+
+.card {
+    color: #c5c5c5;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur( 10px );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 0; /* Ajusta este valor según sea necesario */
+    margin: 1.5rem 2.5rem;
+    padding: 1rem;
+}
+
+.card-text {
+    min-height: 120px;
+}
+
+.card hr {
+    margin: 0;
+}
+
+.img-card-project {
+    height: 300px; /* Ajusta esto según sea necesario */
+    object-fit: cover;
+    border-radius: 0; /* Asegúrate de que este valor sea el mismo que el de .card */
+}
+
+.tag-container {
+    display: flex;
+    min-height: 60px; /* Ajusta este valor según sea necesario */
+}
+
+.tag-container li {
+    background-color: transparent;
+    color: aquamarine;
+}
+
+.tag-element {
+    margin-right: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    min-height: 56px; /* Ajusta este valor según tus necesidades */
+}
+
+.button-card {
+    color: rgb(142, 255, 127);
+    text-decoration: none;
+    font-family: 'prompt', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.button-card:hover {
+    color: #ff0000; /* Cambia esto al color que quieras cuando se pasa el mouse */
+    text-decoration: underline; /* Agrega un subrayado cuando se pasa el mouse */
+}
+
+
+/* contacto */
+/* #contact {
+    background-image: url('/static/img/ciervo-morado.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+
+#contact h2 {
+    color: #7e75e8;
+}
+
+.container-contact {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 3rem;
+    padding: 5rem 0;
+}
+
+.container-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1rem 3rem;
+}
+
+.container-text {
+    flex: 1;
+    color: #D8DFEF;
+    padding: 0 1rem;
+}
+
+.icon-contact {
+    display: flex;
+}
+
+.icons {
+    flex: 1;
+}
+
+.email {
+    flex: 1;
+}
+
+.item-mail {
+    color: #6b6b6b;
+}
+
+.items-icon {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: #f5f5f5;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+  
+.items-icon:hover {
+    background-color: #0056b3;
+}
+
+.card-link {
+    color: #f5f5f5;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 18px; /* Cambia este valor al tamaño que prefieras */
+    gap: 10px;
+}
+
+.card-link span {
+    width: 40px;
+}
+
+.card-link p {
+    font-size: 20px;
+}
+
+
+
+.container-form {
+    background-color: transparent;
+    backdrop-filter: blur( 20px );
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
+    flex: 1;
+    padding: 3rem 3rem;
+}
+
+  
+.div-input {
+    margin-bottom: 20px; /* Añade un espacio entre los campos del formulario */
+}
+  
+.item-form {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Añade bordes redondeados a los campos del formulario */
+}
+  
+.item-form[type="submit"] {
+    background-color: #9FEF00; /* Cambia el color de fondo del botón de envío */
+    font-family: 'roboto', sans-serif;
+    font-weight: 500;
+    color: #141C26;
+    border: none;
+    cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa sobre el botón de envío */
+}
+  
+.item-form[type="submit"]:hover {
+    background-color: #45a049; /* Cambia el color de fondo del botón de envío cuando se pasa el cursor sobre él */
+}
+
+/* FOOTER */
+
+footer {
+    padding-top: 1rem;
+}
+
+.container-footer {
+    margin: 0 3rem;
+}
+
+
+.container-footer hr {
+    border: 1px solid black; /* Cambia 'black' al color que prefieras */
+    height: 1px;
+}
+
+.inner-footer {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.parraf-footer {
+    font-family: 'roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 1rem;
+    margin: 0;
+    color: #6b6b6b;
+
+}
+
+.bottom-footer {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    color: #f5f5f5;
+    margin: 0;
+}
+
+
+
+/* ESTILOS GLOBALES */
+.title-section {
+    font-family: 'prompt', sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    padding: 1rem;
+    margin: 0 4rem;
+}
+
+/* buttons */
+.button-small {
+    background-color: #9fef00;
+    font-family: 'roboto', sans-serif;
+    font-weight: 500;
+    color: #141C26;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 3px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-small:hover { /* Estilos para el botón al pasar el cursor */
+    background-color: #6fa700; /* Cambia el color de fondo al pasar el cursor */
+}
+
+
+
+
+.button-large {
+    background-color: #9FEF00; /* Color de fondo del botón */
+    font-family: 'roboto', sans-serif;
+    font-weight: 500;
+    color: #141C26; /* Color del texto del botón */
+    border: none; /* Elimina el borde */
+    padding: 10px 80px; /* Espaciado interno del botón */
+    font-size: 20px; /* Tamaño de fuente */
+    border-radius: 3px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.button-large:hover { /* Estilos para el botón al pasar el cursor */
+    background-color: #6fa700; /* Cambia el color de fondo al pasar el cursor */
+}
+
