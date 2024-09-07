@@ -1,11 +1,28 @@
 body {
-    background-image: url('/static/img/landscape-1.jpg');
+    /* background-color: #050505; */
+    background-image: url('/static/img/montana-noche.jpeg');
     background-repeat: no-repeat;
     /* background-repeat: repeat; */
     background-size: cover;
     /* background-size: auto; */
     background-attachment: fixed; /* Hace que la imagen de fondo esté fija */
     background-position: center; /* Centra la imagen de fondo */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro translúcido */
+    z-index: 1; /* Asegura que el fondo esté detrás del contenido */
+}
+
+body > * {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté encima del fondo translúcido */
 }
 
 .navbar {
@@ -25,7 +42,7 @@ body {
 }
 
 .navbar a {
-    color: #D8DFEF;
+    color: #f5f5f5;
     font-size: 20px;
     text-decoration: none;
     padding: 10px 20px;
@@ -49,7 +66,7 @@ body {
 
 /* seccion header-home */
 header h1 {
-    color: #7e75e8;
+    color: #f5f5f5;
     font-family: 'prompt', sans-serif;
     font-size: 100px;
     font-weight: 800;
@@ -58,7 +75,7 @@ header h1 {
 }
 
 .nombre-header {
-    color: #D8DFEF;
+    color: #f5f5f5;
     font-family: 'roboto', sans-serif;
     font-size: 40px;
     font-weight: 300;
@@ -81,6 +98,9 @@ header h1 {
 
 
 /* seccion about-home */
+/* #about {
+    background-color: rgba(0, 0, 0, 0.7);
+} */
 
 .container-about {
     margin: 0rem 4rem;
@@ -88,38 +108,31 @@ header h1 {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    height: 400px;
-}
-
-.img-about {
-    flex: 1;
-    padding: 1rem;
+    height: auto;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur( 10px );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
 }
 
 .description-about {
     flex: 3;
     padding: 1rem;
-    font-size: 22px; /* Ajusta este valor según tus necesidades */
-    overflow: auto;
+    font-size: 1rem; /* Ajusta este valor según tus necesidades */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     color: #6b6b6b;
+    max-width: 100%;
+    overflow: visible;
 }
 
 .description-about h3 {
     font-family: 'prompt', sans-serif;
-    font-size: 40px;
+    font-size: 1.5  rem;
     font-weight: 800;
 }
-
-.img-about img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 
 /* seccion skills */
 .section-skills {
@@ -128,7 +141,7 @@ header h1 {
 }
 
 .section-skills h2 {
-    color: #7e75e8;
+    color: f5f5f5;
 }
 
 .container-skills {
@@ -147,19 +160,22 @@ header h1 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2;
-    width: 50%;
-    height: auto;
+    width: 8rem;
+    aspect-ratio: 1 / 1;
     margin: 0 auto;
     text-align: center;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 10px;
-
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur( 10px );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
 }
 
 .card-skills img {
     display: block;
     margin: 0 auto;
-    width: 64px;
+    width: 3rem;
     height: auto;
 }
 
@@ -179,7 +195,7 @@ header h1 {
 
 .card {
     color: #c5c5c5;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur( 10px );
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
     border-radius: 0; /* Ajusta este valor según sea necesario */
@@ -437,3 +453,25 @@ footer {
     background-color: #6fa700; /* Cambia el color de fondo al pasar el cursor */
 }
 
+/* Media Queries para diferentes tamaños de pantalla */
+@media (max-width: 1024px) {
+    .card-skills {
+        width: 50%; /* Ajusta el ancho en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-skills {
+        width: 70%; /* Ajusta el ancho en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-skills {
+        width: 90%; /* Ajusta el ancho en pantallas muy pequeñas */
+    }
+
+    .card-skills img {
+        width: 48px; /* Ajusta el tamaño de la imagen en pantallas muy pequeñas */
+    }
+}   
